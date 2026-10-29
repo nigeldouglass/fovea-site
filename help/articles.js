@@ -774,7 +774,11 @@ window.FOVEA_HELP = {
         },
         {
           "kind": "paragraph",
-          "text": "Every photo goes to your photo library at full size. With RAW or ProRAW, Fovea saves a graded HEIF (your look and crop) and the DNG. **Settings → RAW pipeline → RAW in Photos** chooses how they arrive. **One photo** (the default): Photos shows the HEIF, lists the format as HEIF and labels it JPEG + RAW; the DNG is stored with it but not counted in the size Photos shows. Sharing or AirDropping the photo sends only the HEIF; in the share sheet, tap **Options** and turn on **All Photos Data** to include the DNG. You can also use Export Unmodified Original in Photos on a Mac, or open the photo in an editor that reads RAW. **Two photos**: the HEIF and the DNG arrive as separate photos, each with its own format and size. Photos draws the DNG with its own develop, so your look isn't on it."
+          "text": "Every photo goes to your photo library at the size set in **Settings → Camera → Resolution** (24 MP unless you change it). With RAW or ProRAW, Fovea saves a graded HEIF (your look and crop) and the DNG. **Settings → RAW pipeline → RAW in Photos** chooses how they arrive. **Two photos** (the default): the HEIF and the DNG arrive as separate photos, each with its own format and size. Photos draws the DNG with its own develop, so your look isn't on it. Lightroom and other apps that import from Photos see the DNG. **DNG first**: one photo, with the DNG as the original and the graded HEIF attached. Lightroom imports the DNG; Photos shows the DNG without your look. **HEIF first**: one photo showing the HEIF, labelled JPEG + RAW; the DNG is stored with it but not counted in the size Photos shows. Lightroom imports only the HEIF. Sharing or AirDropping the photo sends only the HEIF; in the share sheet, tap **Options** and turn on **All Photos Data** to include the DNG. You can also use Export Unmodified Original in Photos on a Mac."
+        },
+        {
+          "kind": "paragraph",
+          "text": "**24 MP** works the way the Camera app does it: the camera saves a preview at once and finishes the full photo in your library a moment later. Your look, effects and crop then go on the finished photo as an edit, so **Edit → Revert** in Photos gets the camera's photo back. For both, Fovea needs full Photos access, which it asks for before your first 24 MP shot; it opens only the photos it took. Without full access the camera won't finish photos in your library, so it takes them at 12 MP (with your look); Fovea says so and offers Settings. 24 MP needs the camera's full processing, so manual, priority and Natural shots come out at 12 MP."
         },
         {
           "kind": "heading",
@@ -782,7 +786,7 @@ window.FOVEA_HELP = {
         },
         {
           "kind": "paragraph",
-          "text": "**Standard** is Apple's processing, as the Camera app does it. **Natural** (unlock) skips multi-frame fusion and heavy sharpening, for a plainer file with less smoothing. Set it per shot in the tools drawer, and the default in Settings."
+          "text": "**Standard** is Apple's processing, as the Camera app does it. **Natural** (unlock) skips multi-frame fusion and heavy sharpening, for a plainer file with less smoothing. The pill beside the mode pill shows which one is on; tap it to switch. The tools drawer and Settings change the same setting, as Format and Aspect do in the top bar and Settings."
         },
         {
           "kind": "heading",
@@ -838,7 +842,7 @@ window.FOVEA_HELP = {
           "items": [
             "**Natural processing** turns both noise reduction and sharpening off.",
             "The DNG file itself keeps the sensor data, so you can develop it again in another editor.",
-            "**RAW in Photos**: **One photo** puts the DNG behind the graded HEIF, as one photo; **Two photos** adds them separately, so the DNG shows in Photos as RAW with its full size. Sharing a one-photo pair sends the HEIF; choose **Options → All Photos Data** in the share sheet to include the DNG."
+            "**RAW in Photos**: **Two photos** (the default) adds the graded HEIF and the DNG separately, so Lightroom imports the DNG; **DNG first** makes one photo with the DNG as the original and the HEIF attached; **HEIF first** makes one photo showing the HEIF with the DNG behind it, which Lightroom imports as the HEIF only."
           ]
         },
         {
@@ -1174,7 +1178,11 @@ window.FOVEA_HELP = {
         },
         {
           "kind": "paragraph",
-          "text": "Every photo is saved full size to your photo library. The journal keeps a smaller copy of its own, so sharing from the journal sends that copy. Turn on **Keep full-resolution copies** in Settings to keep originals and RAW files in Fovea too; it uses much more space."
+          "text": "Every photo is saved to your photo library at the size set in Settings → Camera → Resolution. The journal keeps a smaller copy of its own, so sharing from the journal sends that copy. Turn on **Keep full-resolution copies** in Settings to keep originals and RAW files in Fovea too; it uses much more space."
+        },
+        {
+          "kind": "paragraph",
+          "text": "For a 24 MP photo, the journal's copy comes from the camera's 12 MP preview, even with Keep full-resolution copies on; the full photo is in your photo library."
         },
         {
           "kind": "paragraph",
@@ -1353,6 +1361,14 @@ window.FOVEA_HELP = {
             "In Fovea's **Settings**, tap **Restore purchase**.",
             "If it still says nothing to restore, check your purchase history in the App Store."
           ]
+        },
+        {
+          "kind": "heading",
+          "text": "Still stuck?"
+        },
+        {
+          "kind": "paragraph",
+          "text": "At the end of Help's contents, **Email support** opens a draft in Mail with your app and iOS version. Nothing is sent until you send it."
         }
       ]
     }
